@@ -4,7 +4,9 @@ import toast from "react-hot-toast";
 import { io } from "socket.io-client";
 
 const AUTH_SERVICE_URL = import.meta.env.MODE === "development" ? "http://localhost:5001" : "";
-const CHAT_SERVICE_URL = import.meta.env.MODE === "development" ? "http://localhost:5002" : "";
+const CHAT_SERVICE_URL = import.meta.env.MODE === "development" 
+  ? "http://localhost:5002" 
+  : "https://fullstack-chat-app-chat-service.onrender.com";
 
 export const useAuthStore = create((set, get) => ({
   authUser: null,

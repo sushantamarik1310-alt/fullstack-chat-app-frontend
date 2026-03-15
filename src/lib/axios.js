@@ -1,7 +1,12 @@
 import axios from "axios";
 
-const AUTH_SERVICE_URL = import.meta.env.MODE === "development" ? "http://localhost:5001" : "";
-const CHAT_SERVICE_URL = import.meta.env.MODE === "development" ? "http://localhost:5002" : "";
+const AUTH_SERVICE_URL = import.meta.env.MODE === "development" 
+  ? "http://localhost:5001" 
+  : "https://fullstack-chat-app-auth-service.onrender.com";
+
+const CHAT_SERVICE_URL = import.meta.env.MODE === "development" 
+  ? "http://localhost:5002" 
+  : "https://fullstack-chat-app-chat-service.onrender.com";
 
 // Axios instance for Auth Service (signup, login, profile, etc.)
 export const authAxios = axios.create({
